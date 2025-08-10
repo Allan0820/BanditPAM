@@ -649,7 +649,7 @@ def main():
         url="https://github.com/motiwari/BanditPAM",
         long_description=long_description,
         ext_modules=ext_modules,
-        setup_requires=["pybind11>=2.5.0", "numpy>=1.18"],
+        setup_requires=["pybind11>=3.0.0", "numpy>=1.18"],
         data_files=my_data_files,
         include_package_data=True,
         cmdclass={"build_ext": BuildExt},
