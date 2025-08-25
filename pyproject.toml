@@ -1,5 +1,5 @@
 [project]
-license = "MIT"
+license = {text = "MIT"}
 version = "6.0.2"
 name = "banditpam"
 requires-python = ">= 3.10"
