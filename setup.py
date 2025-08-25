@@ -617,8 +617,7 @@ def main():
             libraries=libraries,
             language="c++1z",  # TODO: modify this based on cpp_flag(compiler)
             extra_compile_args=cpp_args,
-            # Not passed? (BuildExt sets extra_link_args)
-            extra_link_args=["-vvvv"],
+            extra_link_args=["-v"],
         )
     ]
 
