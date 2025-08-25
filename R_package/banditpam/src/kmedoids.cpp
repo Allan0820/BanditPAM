@@ -183,9 +183,13 @@ void KMedoids__set_swap_conf(SEXP xp, IntegerVector bc) {
 // [[Rcpp::export(.loss_to_string)]]
 static inline std::string loss_to_string(km::LossType lt) {
     switch (lt) {
-        case km::LossType::L2: return "L2";
-        case km::LossType::L1: return "L1";
-        // add others...
+        case km::LossType::MANHATTAN: return "manhattan";
+        case km::LossType::COS: return "cos";
+        case km::LossType::COSINE: return "cos";
+        case km::LossType::INF: return "inf";
+        case km::LossType::EUCLIDEAN: return "euclidean";
+        case km::LossType::LP_NORM: return "lp";
+        case km::LossType::UNKNOWN: return "unknown";
         default: return "unknown";
     }
 }
