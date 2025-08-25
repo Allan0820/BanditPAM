@@ -394,7 +394,7 @@ class BuildExt(build_ext):
         ), "Need to install LLVM clang!"
         darwin_opts = [
             "-stdlib=libc++",
-            "-mmacosx-version-min=10.14",
+            "-mmacosx-version-min=15.0",
             "-O3",
         ]
         c_opts["unix"] += darwin_opts
