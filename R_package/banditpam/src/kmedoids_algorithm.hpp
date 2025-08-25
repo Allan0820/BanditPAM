@@ -12,6 +12,25 @@
 #include <string>
 
 namespace km {
+
+/**
+ * @brief Enum for different loss function types
+ */
+enum class LossType {
+  MANHATTAN,
+  COS,
+  COSINE,
+  INF,
+  EUCLIDEAN,
+  LP_NORM,
+  UNKNOWN
+};
+
+/**
+ * @brief Enum for different distance categories
+ */
+enum class AlgorithmStep { MISC, BUILD, SWAP };
+
 /**
  * @brief KMedoids class. Creates a KMedoids object that can be used to find the medoids
  * for a particular set of input data.
