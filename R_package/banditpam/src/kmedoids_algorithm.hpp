@@ -209,7 +209,7 @@ class KMedoids {
    *
    * @returns Loss function currently being recognized
    */
-  std::string getLossFn() const;
+  LossType getLossFn() const;
 
   /**
    * @brief Get the average loss from the prior clustering
