@@ -86,11 +86,11 @@ jobs:
           cd BanditPAM
           # The flags are necessary to ignore the pyproject.toml
           # See https://github.com/pypa/pip/issues/9738
-          python -m pip install -vvvv --no-use-pep517 .
+          python -m pip install -v --no-use-pep517 .
           cd scripts
           sh retrieve_windows_python_files.sh
           cd ..
-          python -m pip install -vvvv --no-use-pep517 .
+          python -m pip install -v --no-use-pep517 .
 
       - name: Run smaller suite of test cases
         run: |

@@ -1,6 +1,6 @@
 # Installation Tutorial for MacOS
 
-The following is a more detailed description of the installation process of BanditPAM for MacOS.
+The following is a more detailed description of the installation process of BanditPAM for MacOS 15.0+.
 
 ## Prerequisites
 Please ensure the following dependencies are installed:

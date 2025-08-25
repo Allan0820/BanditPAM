@@ -18,7 +18,7 @@ jobs:
       fail-fast: false
       matrix:
         # Python 3.11 on Mac errors with "Library not loaded: '@rpath/libarmadillo.11.dylib'"
-        python-version: ["3.10"] #, "3.11", "3.12", "3.13"]
+        python-version: ["3.10", "3.11", "3.12", "3.13"]
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
@@ -65,7 +65,7 @@ jobs:
         run: |
           # The flags are necessary to ignore the pyproject.toml
           # See https://github.com/pypa/pip/issues/9738
-          python -m pip install --no-use-pep517 --no-build-isolation -vvv -e .
+          python -m pip install --no-use-pep517 --no-build-isolation -v -e .
 
       - name: Downloading data files for tests
         run: |
