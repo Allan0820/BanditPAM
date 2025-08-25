@@ -29,9 +29,11 @@ jobs:
 
       # On the MacOS machine, when installing from source,
       # we use LLVM Clang
+      # Note: we need to include armadillo here even though we install armadillo from source
+      #  to create the correct folders
       - name: Install MacOS dependencies
         run: |
-          brew install llvm libomp
+          brew install llvm libomp armadillo
 
       - name: Install Python dependencies
         run: |
