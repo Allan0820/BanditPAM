@@ -5,21 +5,32 @@
 <!-- badges: end -->
 
 We provide an R interface to the high-performance implementation of
-[banditpam](https://proceedings.neurips.cc/paper/2020/file/73b817090081cef1bca77232f4532c5d-Paper.pdf),
+[BanditPAM](https://proceedings.neurips.cc/paper/2020/file/73b817090081cef1bca77232f4532c5d-Paper.pdf) and [BanditPAM++](https://proceedings.neurips.cc/paper_files/paper/2023/file/e885e5bc6e13b9dd8f80bc5482b1fa2f-Paper-Conference.pdf),
 a $k$-medoids clustering algorithm.
 
 If you use this software, please cite:
 
->>Mo Tiwari, Martin Jinye Zhang, James Mayclin, Sebastian Thrun, Chris Piech, Ilan Shomorony. "banditpam: Almost Linear Time *k*-medoids Clustering via Multi-Armed Bandits" Advances in Neural Information Processing Systems (NeurIPS) 2020.
+>>Mo Tiwari, Martin Jinye Zhang, James Mayclin, Sebastian Thrun, Chris Piech, Ilan Shomorony. "BanditPAM: Almost Linear Time *k*-medoids Clustering via Multi-Armed Bandits" Advances in Neural Information Processing Systems (NeurIPS) 2020.
 
-Here's a BibTeX entry:
+>>Mo Tiwari, Ryan Kang*, Donghyun Lee*, Sebastian Thrun, Chris Piech, Ilan Shomorony, Martin Jinye Zhang. "BanditPAM++: Faster k-medoids Clustering" Advances in Neural Information Processing Systems (NeurIPS) 2023.
+
+Here's the BibTeX:
 ```
-@inproceedings{banditpam,
-  title={banditpam: Almost Linear Time k-medoids Clustering via Multi-Armed Bandits},
+@inproceedings{tiwari2020banditpam,
+  title={BanditPAM: Almost Linear Time %k%-medoids Clustering via Multi-Armed Bandits},
   author={Tiwari, Mo and Zhang, Martin J and Mayclin, James and Thrun, Sebastian and Piech, Chris and Shomorony, Ilan},
   booktitle={Advances in Neural Information Processing Systems},
   pages={368--374},
   year={2020}
+}
+
+@inproceedings{tiwari2023banditpam++,
+  title={BanditPAM++: Faster $k$-medoids Clustering},
+  author={Tiwari, Mo and Kang, Ryan and Lee, Donghyun and Thrun, Sebastian and Shomorony, Ilan and Zhang, Martin J},
+  journal={Advances in Neural Information Processing Systems},
+  volume={36},
+  pages={73371--73382},
+  year={2023}
 }
 ```
 

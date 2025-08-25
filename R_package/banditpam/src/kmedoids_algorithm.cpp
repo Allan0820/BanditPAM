@@ -267,7 +267,7 @@ void KMedoids::setLossFn(std::string loss) {
     c = ::tolower(c);  // TODO(@motiwari): Put something before ::
   });
   
-  switch (getLossType(loss)) {
+  switch (KMedoids::getLossType(loss)) {
     case LossType::MANHATTAN:
       lossFn = &KMedoids::manhattan;
       break;

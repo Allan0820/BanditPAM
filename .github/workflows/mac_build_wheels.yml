@@ -28,7 +28,7 @@ jobs:
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.23.3
         env:
-          MACOSX_DEPLOYMENT_TARGET: "14"
+          MACOSX_DEPLOYMENT_TARGET: "15"
           CIBW_ARCHS_MACOS: "x86_64 arm64 universal2"
 
           CIBW_BUILD: "cp310* cp311* cp312* cp313*"
@@ -59,7 +59,7 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.TEST_PYPI_APIKEY }}
-          repository_url: https://test.pypi.org/legacy/
+          repository-url: https://test.pypi.org/legacy/
 
       - name: Upload to PyPI on published release
         if: ${{ github.event_name == 'release' && github.event.action == 'published' }}

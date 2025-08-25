@@ -150,7 +150,7 @@ SEXP KMedoids__get_build_conf(SEXP xp) {
 //// Set the build_conf property
 ////
 //// @param xp the km::KMedoids Object XPtr
-// [[Rcpp::export(.KMedoids__set_iter)]]
+// [[Rcpp::export(.KMedoids__set_build_conf)]]
 void KMedoids__set_build_conf(SEXP xp, IntegerVector bc) {
   // grab the object as a XPtr (smart pointer)
   XPtr<km::KMedoids> ptr(xp);
@@ -170,11 +170,28 @@ SEXP KMedoids__get_swap_conf(SEXP xp) {
 //// Set the swap_conf property
 ////
 //// @param xp the km::KMedoids Object XPtr
-// [[Rcpp::export(.KMedoids__set_iter)]]
+// [[Rcpp::export(.KMedoids__set_swap_conf)]]
 void KMedoids__set_swap_conf(SEXP xp, IntegerVector bc) {
   // grab the object as a XPtr (smart pointer)
   XPtr<km::KMedoids> ptr(xp);
   ptr->setSwapConfidence(bc[0]);
+}
+
+//// Convenience function to convert LossType to string
+////
+//// @param lt the km::KMedoids LossType
+// [[Rcpp::export(.loss_to_string)]]
+static inline std::string loss_to_string(km::LossType lt) {
+    switch (lt) {
+        case km::LossType::MANHATTAN: return "manhattan";
+        case km::LossType::COS: return "cos";
+        case km::LossType::COSINE: return "cos";
+        case km::LossType::INF: return "inf";
+        case km::LossType::EUCLIDEAN: return "euclidean";
+        case km::LossType::LP_NORM: return "lp";
+        case km::LossType::UNKNOWN: return "unknown";
+        default: return "unknown";
+    }
 }
 
 //// Return the loss_fn property
@@ -184,7 +201,7 @@ void KMedoids__set_swap_conf(SEXP xp, IntegerVector bc) {
 SEXP KMedoids__get_loss_fn(SEXP xp) {
   // grab the object as a XPtr (smart pointer)
   XPtr<km::KMedoids> ptr(xp);
-  return wrap(ptr->getLossFn());
+  return wrap(loss_to_string(ptr->getLossFn()));
 }
 
 //// Set the loss_fn property

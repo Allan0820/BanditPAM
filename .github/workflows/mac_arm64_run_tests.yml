@@ -29,6 +29,8 @@ jobs:
 
       # On the MacOS machine, when installing from source,
       # we use LLVM Clang
+      # Note: we need to include armadillo here even though we install armadillo from source
+      #  to create the correct folders
       - name: Install MacOS dependencies
         run: |
           brew install llvm libomp armadillo
@@ -45,6 +47,7 @@ jobs:
           cd ~
           git clone https://gitlab.com/conradsnicta/armadillo-code.git
           cd armadillo-code
+          git checkout tags/14.6.3
           sudo cmake .
           sudo make install
 
@@ -63,7 +66,7 @@ jobs:
         run: |
           # The flags are necessary to ignore the pyproject.toml
           # See https://github.com/pypa/pip/issues/9738
-          python -m pip install --no-use-pep517 --no-build-isolation -vvv -e .
+          python -m pip install --no-use-pep517 --no-build-isolation -v -e .
         env:
           # The default compiler on the Github Ubuntu runners is gcc
           # Would need to make a respective include change for clang
