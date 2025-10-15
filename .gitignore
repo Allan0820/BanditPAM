@@ -30,3 +30,8 @@ dist/
 wheelhouse/
 .eggs/
 .Rproj.user
+lib/
+lib64/
+pyvenv.cfg
+include/
+bin/
